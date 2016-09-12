@@ -1,0 +1,33 @@
+{
+  "name": "morx",
+  "version": "0.0.0",
+  "description": "Simple param extractor and validation util.",
+  "main": "morx.js",
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/4y0/morx.git"
+  },
+  "keywords": [
+    "validator",
+    "validation",
+    "api-spec",
+    "morx"
+  ],
+  "author": "4y0",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/4y0/morx/issues"
+  },
+  "homepage": "https://github.com/4y0/morx#readme",
+  "devDependencies": {
+    "chai": "3.5.0",
+    "mocha": "3.0.2"
+  },
+  "dependencies": {
+    "mosc": "1.0.0",
+    "validator": "5.7.0"
+  }
+}
