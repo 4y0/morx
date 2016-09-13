@@ -8,13 +8,13 @@
 ### Basic Usage
 ```
 var morx = require('morx');
-morx.spec() //Begin spec-ing parameters
-    .build('id', 'required:true, map:user_id')
-    .build('username', 'required:true')
-    .end(); //End parameter spec-ing
+var spec = morx.spec() //Begin spec-ing parameters
+           .build('id', 'required:true, map:user_id')
+           .build('username', 'required:true')
+           .end(); //End parameter spec-ing
 
 //Call validation
-var validated = morx.validate({id:23, username:'demio9009'});
+var validated = morx.validate({id:23, username:'demio9009'}, spec);
 console.log(validated);
 /*
 {
@@ -32,13 +32,13 @@ console.log(validated);
 ### Using validators and filters
 ```
 var morx = require('morx');
-morx.spec() //Begin spec-ing parameters
-    .build('id', 'required:true, validators:isInt, map:user_id')
-    .build('username', 'required:true, validators:isAlphanumeric.isAscii, filters:toUpper')
-    .end(); //End parameter spec-ing
+var spec = morx.spec() //Begin spec-ing parameters
+           .build('id', 'required:true, validators:isInt, map:user_id')
+           .build('username', 'required:true, validators:isAlphanumeric.isAscii, filters:toUpper')
+           .end(); //End parameter spec-ing
 
 //Call validation
-var validated = morx.validate({id:23, username:'demio9009'});
+var validated = morx.validate({id:23, username:'demio9009'}, spec);
 console.log(validated);
 /*
 {
