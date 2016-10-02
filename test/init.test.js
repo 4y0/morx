@@ -10,18 +10,23 @@ describe('******-******MORX******-******', function () {
 		var paramSpec = morx.spec()
 						.build('id', 'required:true, map:user_id, validators:isInt')
 						.build('username', 'required:true, validators:isEmail')
+						.build('ukey', 'required:true,not_param:1')
 						.end();
+
 
 		var test_params = {
 			'id': 45,
-			'username':'desujoe@gmail.com'
+			'username':'desujoe@gmail.com',
+			'ukey':'9009'
 		};
 
 		var morx_result = morx.validate(test_params, paramSpec);
+		console.log(morx_result);
 		test_params = morx_result.params;
 		expect(test_params).to.not.have.property('id');
 		expect(test_params).to.have.property('user_id').to.equal(45);
 		expect(test_params).to.have.property('username').to.equal('desujoe@gmail.com');
+		expect(morx_result).to.have.property('no_errors').to.equal(true);
 	});
 
 

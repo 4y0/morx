@@ -67,6 +67,7 @@ spec = {
 * `map` : If present, indicates the key `paramToValidate` should be returned with. Without `map`, `id` will be returned as `id`. With map (`map:user_id`), `id` will be returned as `user_id` (see example under basic usage)
 * `validators`: A dot separated list of validators to apply to `paramToValidate`. Internally, morx uses the [validator](https://www.npmjs.com/package/validator) package on npm to validate parameter values. A list of supported validators can be found [here](https://www.npmjs.com/package/validator#validators). 
 * `filters` : A dot separated list of filters / sanitizers to apply to `paramToValidate`. All filters with the exception of `toUpper` and `toLower` are the same as those provided by the validator package. A list can be found [here](https://www.npmjs.com/package/validator#sanitizers). 
+* `not_param` : A boolean value indicated wether the `paramToValidate` should be returned as part of the extracted params. Useful for cases when a parm is required but not needed for functional operations. 
 
 Parameter specs can be created either using object literals or morx's inbuilt spec-er:
 ```
