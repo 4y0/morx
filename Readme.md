@@ -102,5 +102,12 @@ The morx validator takes three arguments, the first two are required.
     * `throw_error` - If this is set to true, instead of returning a well formed object, morx will throw an error with the validation error messages
     * `throw_error_on_first_fail` - Similar to `fail_on_first_error` but instead of returning, an error with the validation error message is thrown.
 
+### Auto-test generation with [morx-cha](https://www.npmjs.com/package/morx-cha)
 
+To use morx with [morx-cha](https://www.npmjs.com/package/morx-cha), the additional spec properties are required
+
+* `eg` - Example value for the parameter
+* `eg_specialcase` - Example special case value for the parameter, e.g. eg_invalid_email or eg_exists e.t.c. _This is yet to be implemented_
+
+See example [here](https://github.com/4y0/morxcha/tree/master/examples)
 
