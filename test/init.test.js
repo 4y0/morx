@@ -11,6 +11,7 @@ describe('******-******MORX******-******', function () {
 						.build('id', 'required:true, map:user_id, validators:isInt')
 						.build('username', 'required:true, validators:isEmail')
 						.build('ukey', 'required:true,not_param:1')
+						.build('email', 'required:false,validators:isEmail')
 						.end();
 
 
