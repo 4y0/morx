@@ -1,6 +1,6 @@
 {
   "name": "morx",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Simple param extractor and validation util.",
   "main": "morx.js",
   "scripts": {
